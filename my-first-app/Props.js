@@ -1,11 +1,25 @@
-//Todo: Refactor into a seperate file (Props.js), import and complete the exercise
-class Props extends React.Component {
-    static navigationOptions = { title: "Learn about Props" }
+import React, { Component } from 'react';
+import { AppRegistry, Text, View } from 'react-native';
+
+class Greeting extends Component {
     render() {
         return (
-            <View>
-                <Text>Props</Text>
-            </View>
-        )
+            <Text>Hello {this.props.name}!</Text>
+        );
     }
 }
+
+export default class LotsOfGreetings extends Component {
+    render() {
+        return (
+            <View style={{alignItems: 'center'}}>
+                <Greeting name='Rexxar' />
+                <Greeting name='Jaina' />
+                <Greeting name='Valeera' />
+            </View>
+        );
+    }
+}
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('AwesomeProject', () => LotsOfGreetings);

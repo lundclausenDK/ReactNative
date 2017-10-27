@@ -1,5 +1,8 @@
+import React, { Component } from 'react';
+import { WebView, Text, View } from 'react-native';
+
 //Todo: Refactor into a seperate file (WhatToDo.js), import and complete the exercise
-class WhatToDo extends React.Component {
+export default class WhatToDo extends Component {
     static navigationOptions = {title: "What I have to do"}
 
     render() {

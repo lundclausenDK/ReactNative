@@ -1,7 +1,10 @@
-//Todo: Refactor into a seperate file (Basics.js), import and complete the exercise
-class Basics extends React.Component {
-    static navigationOptions = { title: "Learn the Basics" }
+import React, { Component } from 'react';
+import { Text } from 'react-native';
+
+export default class HelloWorldApp extends Component {
     render() {
-        return (<View><Text>Learn The Bacics</Text></View>)
+        return (
+            <Text>Hello world!</Text>
+        );
     }
 }
